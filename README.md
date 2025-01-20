@@ -1,2 +1,2 @@
 # School_System_Managements
-creation 
+Cette application permet la gestion d'un Etablissement Scolaire avec Payement.
