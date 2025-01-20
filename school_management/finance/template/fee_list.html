@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Structure des frais</h1>
+<ul>
+    {% for fee in fees %}
+    <li>
+        {{ fee.student_class }} : {{ fee.amount }} (échéance : {{ fee.due_date }})
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Messages</h1>
+<a href="{% url 'message_create' %}" class="btn btn-primary">Envoyer un message</a>
+<ul>
+    {% for message in messages %}
+    <li>
+        <strong>{{ message.sender }} à {{ message.receiver }}</strong> : {{ message.subject }} ({{ message.sent_at }})
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

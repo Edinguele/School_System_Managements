@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Emplois du temps</h1>
+<a href="{% url 'timetable_create' %}" class="btn btn-primary">Ajouter un emploi du temps</a>
+<ul>
+    {% for timetable in timetables %}
+    <li>
+        {{ timetable.day }} - Période {{ timetable.period }} : {{ timetable.subject }} ({{ timetable.classroom }})
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Liste des élèves</h1>
+<a href="{% url 'student_create' %}" class="btn btn-primary">Ajouter un élève</a>
+<ul>
+    {% for student in students %}
+    <li>
+        <a href="{% url 'student_detail' student.id %}">{{ student.first_name }} {{ student.last_name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

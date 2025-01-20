@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Tableau de bord</h1>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Élèves</h5>
+                <p class="card-text">{{ total_students }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Enseignants</h5>
+                <p class="card-text">{{ total_teachers }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Paiements</h5>
+                <p class="card-text">{{ total_payments }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Paiements</h1>
+<a href="{% url 'payment_create' %}" class="btn btn-primary">Ajouter un paiement</a>
+<ul>
+    {% for payment in payments %}
+    <li>
+        {{ payment.student }} a payé {{ payment.amount_paid }} le {{ payment.payment_date }}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

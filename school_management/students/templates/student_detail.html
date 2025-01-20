@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ student.first_name }} {{ student.last_name }}</h1>
+<p>Date de naissance : {{ student.date_of_birth }}</p>
+<p>Date d'inscription : {{ student.enrollment_date }}</p>
+<a href="{% url 'attendance_create' %}" class="btn btn-secondary">Ajouter une présence</a>
+{% endblock %}
